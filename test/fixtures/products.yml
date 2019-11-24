@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  name: MyString
+  nib_size: MyString
+  features: MyText
+
+two:
+  code: MyString
+  name: MyString
+  nib_size: MyString
+  features: MyText
