@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :category_products
+  resources :categories
   resources :items
   resources :colors
   resources :products
