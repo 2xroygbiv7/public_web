@@ -28,7 +28,7 @@ end
 
 puts "#{Category.all.length} categories created"
 
-color_image = "http://placeholder.it/25x25"
+color_image = "http://placehold.it/20x20"
 color_list = [
   ["a",
    "black",

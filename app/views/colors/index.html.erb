@@ -1,2 +1,7 @@
 <h1>Colors</h1>
-<%= @colors.inspect %>
+    <% @colors.each do |color| %>
+      <p>
+      <%= image_tag(color.image) %>
+        <%= color.code %> - <%= color.name %>
+      </p>
+    <% end %>

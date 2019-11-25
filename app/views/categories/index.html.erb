@@ -1,2 +1,18 @@
 <h1>Categories</h1>
-<%= @categories.inspect %>
+<p>Total Categories: <%= @categories.length %></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.name %></td>
+        <td><%= category.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
