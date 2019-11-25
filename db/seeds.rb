@@ -53,3 +53,26 @@ color_list.each do |code, name, image|
 end
 
 puts "#{Color.all.length} colors created"
+
+product_list = [
+  ["BL207",
+   "EnerGel Metallic",
+   "0.7mm",
+   "Feature 01, Feature 02",
+   [1,2,3],
+   [1]
+  ]
+]
+
+product_list.each do |code, name, nib_size, features, colors, categories|
+  Product.create!(
+    code: code,
+    name: name,
+    nib_size: nib_size,
+    features: features,
+    color_ids: colors,
+    category_ids: categories
+  )
+end
+
+puts "#{Product.all.length} products created"
