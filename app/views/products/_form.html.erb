@@ -31,6 +31,14 @@
     <%= form.text_area :features %>
   </div>
 
+  <div class="field">
+    <%= form.label  :colors %>
+    <%  @colors.each do |color| %>
+      <%= check_box_tag :color_ids, color.id, @product.colors.include?(color), :name => 'product[color_ids][]' -%>
+      <%= label_tag :color_ids, color.name -%>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

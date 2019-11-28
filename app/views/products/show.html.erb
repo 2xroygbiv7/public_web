@@ -20,5 +20,19 @@
   <%= @product.features %>
 </p>
 
+<p>
+  <strong>Colours:</strong>
+  <% @product.colors.each do |color|  %>
+    <%= color.name %>
+  <% end %>
+</p>
+
+<p>
+  <strong>Categories:</strong>
+  <% @product.categories.each do |category|  %>
+    <%= category.name %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
