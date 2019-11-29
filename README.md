@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby ver 2.6.2
+* Rails ver 6.0.1
+* Node ver 12.13.0
+* Model - has_many through - Colors
+* View - hecklist
 
-Things you may want to cover:
+## Next
+* Model - has_many through - Catagory
+* View - Item images from placeholder.it
+* View - Item images from Amazon S3 bucket
+* csv import for product
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

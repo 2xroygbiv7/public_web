@@ -1,0 +1,23 @@
+<h1>Items</h1>
+<p>Total items: <%= @items.count %>
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Image</th>
+      <th>Product</th>
+      <th>Color</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.code %></td>
+        <td><%= item.image %></td>
+        <td><%= item.product.code %></td>
+        <td><%= item.color.code %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
