@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Code</th>
       <th>Image</th>
       <th>Product</th>
@@ -13,11 +14,12 @@
   <tbody>
     <% @items.each do |item| %>
       <tr>
+        <td><%= item.id %></td>
         <td><%= item.code %></td>
         <td><%= item.image %></td>
         <td><%= item.product.code %></td>
         <td><%= item.color.code %></td>
-      </tr>
+      <https://millarian.com/rails/quick-tip-has_many-through-checkboxes//tr>
     <% end %>
   </tbody>
 </table>

@@ -1,5 +1,6 @@
 # README
 
+## Completed
 * Ruby ver 2.6.2
 * Rails ver 6.0.1
 * Node ver 12.13.0
