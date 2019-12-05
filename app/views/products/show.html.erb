@@ -6,6 +6,12 @@
 </p>
 
 <p>
+  <strong>Image:</strong>
+  <br>
+  <%= image_tag @product.items.first.image, id: "product_image" %>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @product.name %>
 </p>
@@ -21,10 +27,12 @@
 </p>
 
 <p>
-  <strong>Colours:</strong>
+  <strong id="my-id">Colours:</strong>
+  <div class='product-colors'>
   <% @product.colors.each do |color|  %>
-    <%= color.name %>
+    <div id='image-<%= @product.code + "-" + color.code.upcase  %>'> <%= color.name%></div>
   <% end %>
+  </div>  
 </p>
 
 <p>
