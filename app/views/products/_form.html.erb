@@ -22,6 +22,15 @@
   </div>
 
   <div class="field">
+    <%= form.label  :categories %>
+    <%  @categories.each do |category| %>
+      <span><%= check_box_tag :categories_ids, category.id, @product.categories.include?(category), :name => 'product[category_ids][]' %>
+      <%= label_tag :category_ids, category.name %>
+      </span>
+    <% end %>
+  </div>
+
+  <div class="field">
     <%= form.label :nib_size %>
     <%= form.text_field :nib_size %>
   </div>
@@ -34,8 +43,9 @@
   <div class="field">
     <%= form.label  :colors %>
     <%  @colors.each do |color| %>
-      <%= check_box_tag :color_ids, color.id, @product.colors.include?(color), :name => 'product[color_ids][]' -%>
-      <%= label_tag :color_ids, color.name -%>
+      <span><%= check_box_tag :color_ids, color.id, @product.colors.include?(color), :name => 'product[color_ids][]' %>
+      <%= label_tag :color_ids, color.name %>
+      </span>
     <% end %>
   </div>
 

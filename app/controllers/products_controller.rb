@@ -16,11 +16,13 @@ class ProductsController < ApplicationController
   def new
     @product = Product.new
     @colors = Color.all
+    @categories = Category.all
   end
 
   # GET /products/1/edit
   def edit
     @colors = Color.all
+    @categories = Category.all
   end
 
   # POST /products
@@ -28,6 +30,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     @colors = Color.all
+    @categories = Category.all
 
     respond_to do |format|
       if @product.save
@@ -72,6 +75,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:code, :name, :nib_size, :features, color_ids: [])
+      params.require(:product).permit(:code, :name, :nib_size, :features, color_ids: [], category_ids: [])
     end
 end

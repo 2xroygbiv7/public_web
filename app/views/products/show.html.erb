@@ -17,6 +17,13 @@
 </p>
 
 <p>
+  <strong>Categories:</strong>
+  <% @product.categories.each do |category|  %>
+    <%= category.name %>
+  <% end %>
+</p>
+
+<p>
   <strong>Nib size:</strong>
   <%= @product.nib_size %>
 </p>
@@ -28,19 +35,13 @@
 
 <p>
   <strong id="my-id">Colours:</strong>
-  <div class='product-colors'>
+  <span class='product-colors'>
   <% @product.colors.each do |color|  %>
-    <div id='<%= @product.code + "-" + color.code.upcase %>' class='product-color'> <%= color.name%></div>
+    <span id='<%= @product.code + "-" + color.code.upcase %>' class='product-color'> <%= color.name%></span>
   <% end %>
-  </div>  
+  </span>  
 </p>
 
-<p>
-  <strong>Categories:</strong>
-  <% @product.categories.each do |category|  %>
-    <%= category.name %>
-  <% end %>
-</p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
